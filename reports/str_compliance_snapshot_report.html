@@ -4,6 +4,154 @@
 
     <style>
                       
+    .summary-heading{
+        font-size:20px;
+        margin:16px 0 4px;
+        padding-bottom:4px;
+        border-bottom:1px solid #aaa;
+    }
+
+    .summary-stats{
+        display:flex;
+        gap:38px;
+        margin:10px 0 8px;
+    }
+
+    .summary-number{
+        font-size:18px;      /* was 22 */
+        font-weight:700;
+    }
+
+    .summary-percent{
+        font-size:11px;
+        color:#999;
+        font-weight:400;
+    }
+
+    .summary-label{
+        font-size:10px;
+        color:#777;
+        letter-spacing:.04em;
+    }
+
+    .summary-description{
+        margin:10px 0 8px;
+        font-size:13px;
+        color:#666;
+        line-height:1.35;
+        max-width:1200px;
+    }
+
+    .summary-divider{
+        margin:12px 0 10px;
+        border:0;
+        border-top:1px solid #d5d5d5;
+    }
+
+    .metrics-heading{
+        font-size:15px;
+        margin:10px 0 4px;
+    }
+
+    .metrics-table{
+        border-collapse:collapse;
+        width:420px;
+        margin:6px 0 14px;
+        font-size:13px;
+    }
+
+    .metrics-table td{
+        padding:5px 0;
+        border-bottom:1px solid #ddd;
+    }
+
+    .metric-value{
+        text-align:right;
+        font-weight:700;
+        width:80px;
+    }
+                      
+    .metrics-heading{
+        margin:14px 0 6px;
+        font-size:18px;
+        font-weight:600;
+    }
+                      
+    .metrics-subheading{
+        font-weight:700;
+        color:#555;
+        padding-top:10px !important;
+        padding-bottom:4px !important;
+        border:none !important;
+        background:none !important;
+    }
+
+    .summary-metrics{
+        width:420px;
+        border-collapse:collapse;
+        margin-bottom:16px;
+        font-size:14px;
+    }
+
+    .summary-metrics td{
+        padding:4px 0;
+        border:none;
+    }
+
+    .summary-metrics td:last-child{
+        text-align:right;
+        font-weight:600;
+        width:110px;
+    }
+
+    .summary-metrics th{
+        text-align:left;
+        font-size:13px;
+        color:#666;
+        font-weight:600;
+        padding:10px 0 4px;
+        border:none;
+    }
+
+    .snapshot-stats{
+        width:460px;
+        margin:8px 0 16px;
+        font-size:14px;
+    }
+
+    .stats-row{
+        display:flex;
+        justify-content:space-between;
+        width:460px;
+    }
+
+    .stats-heading{
+        font-size:16px;
+        font-weight:700;
+        margin-bottom:8px;
+    }
+
+    .stats-subheading{
+        margin:14px 0 6px;
+        font-size:12px;
+        font-weight:700;
+        color:#777;
+        text-transform:uppercase;
+        letter-spacing:.05em;
+    }
+
+    .stats-row{
+        padding:3px 0;
+    }
+
+    .stats-row span:first-child{
+        color:#333;
+    }
+
+    .stats-row span:last-child{
+        font-weight:700;
+    }
+                        
     .badge-new {
         display: inline-block;
         margin-top: 4px;
@@ -126,8 +274,70 @@
     
 </head><body>
 <h1>East Haven STR Compliance Snapshot</h1>
-<p class='small'>Snapshot date: 2026-07-08</p>
+<p class='small'>Snapshot date: 2026-07-09</p>
 <p class='small'><a href='https://www.saferr-eh.com/str-monitoring-methodology' target='_blank'>Methodology / Classification / Scoring Explanation</a></p>
+
+    <h2 class="summary-heading">Current Snapshot Summary</h2>
+
+    <div class="summary-stats">
+        <div>
+            <span class="summary-number">22</span>
+            <span class="summary-percent">37%</span>
+            <span class="summary-label">Reduced / Inactive</span>
+        </div>
+
+        <div>
+            <span class="summary-number">30</span>
+            <span class="summary-percent">50%</span>
+            <span class="summary-label">Still Active</span>
+        </div>
+
+        <div>
+            <span class="summary-number">8</span>
+            <span class="summary-percent">13%</span>
+            <span class="summary-label">Under Review</span>
+        </div>
+    </div>
+
+    <p class="summary-description">
+    <strong>60</strong> properties currently monitored. Classifications are based on aggregated booking, review, calendar, and complaint indicators.
+    </p>
+    
+
+    <div class="snapshot-stats">
+
+        <div class="stats-heading">Monitoring Summary</div>
+
+        <div class="stats-row">
+            <span>Properties monitored</span>
+            <span>60</span>
+        </div>
+
+        <div class="stats-row">
+            <span>Public complaints received</span>
+            <span>118</span>
+        </div>
+
+        <div class="stats-subheading">Current classifications</div>
+
+        <div class="stats-row">
+            <span>Reduced / inactive</span>
+            <span>22 (37%)</span>
+        </div>
+
+        <div class="stats-row">
+            <span>Still active</span>
+            <span>30 (50%)</span>
+        </div>
+
+        <div class="stats-row">
+            <span>Under review</span>
+            <span>8 (13%)</span>
+        </div>
+
+    </div>
+    
+<hr class='summary-divider'>
 <p>This report summarizes current STR monitoring classifications based on publicly observable listing activity, booking-calendar behavior, guest reviews, resident complaints, and related monitoring indicators. Classifications may change as additional monitoring data becomes available.</p>
 <p class='small'><strong>Activity codes:</strong> (ls) likely stay/block window; (cc) calendar change; (ww) watch window; (rev) review; (com) complaint.</p>
 <h2>Priority Enforcement (13)</h2>
@@ -140,20 +350,20 @@
 <tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=34CORTINARD' target='_blank'>34 Cortina Rd</a></td><td><a class='btn' href='https://www.airbnb.com/rooms/26493819' target='_blank'>Airbnb</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=34+Cortina+Rd+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/34+Cortina+Rd_rb/' target='_blank'>Zillow</a></td><td>High (316)</td><td>9 post-ordinance review(s); 4 short-stay review(s); 1 complaint(s); 5 potential stay/block window(s); 4 short open gap/watch window(s); 28 calendar change record(s)</td><td>2026-08-19 (ww)</td></tr>
 <tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=46MANSFIELDGROVERD' target='_blank'>46 Mansfield Grove Rd</a></td><td><a class='btn' href='https://www.airbnb.com/rooms/44021152' target='_blank'>Airbnb</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=46+Mansfield+Grove+Rd+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/46+Mansfield+Grove+Rd_rb/' target='_blank'>Zillow</a></td><td>High (270)</td><td>6 post-ordinance review(s); 5 short-stay review(s); 1 complaint(s); 3 potential stay/block window(s); 3 short open gap/watch window(s); 61 calendar change record(s)</td><td>2026-08-23 (ww)</td></tr>
 <tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=47COSEYBEACHAVE' target='_blank'>47 Cosey Beach Ave</a></td><td><a class='btn' href='https://www.airbnb.com/rooms/1233414522385351051' target='_blank'>Airbnb</a> <a class='btn' href='https://www.vrbo.com/20010655ha' target='_blank'>VRBO</a><br><a class='btn' href='https://www.booking.com/hotel/us/sunny-east-haven-home-with-grill-walk-to-beaches.html' target='_blank'>Booking</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=47+Cosey+Beach+Ave+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/47+Cosey+Beach+Ave_rb/' target='_blank'>Zillow</a></td><td>High (264)</td><td>4 post-ordinance review(s); 1 short-stay review(s); 1 group-trip review(s); 4 complaint(s); 10 potential stay/block window(s); 6 short open gap/watch window(s); 49 calendar change record(s)</td><td>2026-08-31 (ww)</td></tr>
-<tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=81HENRYST' target='_blank'>81 Henry St</a></td><td><a class='btn' href='https://www.airbnb.com/rooms/857871270285777724' target='_blank'>Airbnb</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=81+Henry+St+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/81+Henry+St_rb/' target='_blank'>Zillow</a></td><td>High (260)</td><td>6 post-ordinance review(s); 2 short-stay review(s); 3 complaint(s); 7 potential stay/block window(s); 6 short open gap/watch window(s); 15 calendar change record(s)</td><td>2026-08-31 (ls)</td></tr>
 <tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=46HILTONAVE' target='_blank'>46 Hilton Ave</a></td><td><a class='btn' href='https://www.vrbo.com/4707960' target='_blank'>VRBO</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=46+Hilton+Ave+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/46+Hilton+Ave_rb/' target='_blank'>Zillow</a></td><td>High (226)</td><td>9 post-ordinance review(s); 3 short-stay review(s); 2 complaint(s)</td><td></td></tr>
-<tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=76MORGANAVE' target='_blank'>76 Morgan Ave</a></td><td><a class='btn' href='https://www.airbnb.com/rooms/31993193' target='_blank'>Airbnb</a> <a class='btn' href='https://www.vrbo.com/1634680' target='_blank'>VRBO</a><br><a class='btn' href='https://www.booking.com/hotel/us/casa-al-mare-beachfront-retreat-king-bed-near-yale.html' target='_blank'>Booking</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=76+Morgan+Ave+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/76+Morgan+Ave_rb/' target='_blank'>Zillow</a></td><td>High (224)</td><td>5 post-ordinance review(s); 3 group-trip review(s); 3 complaint(s); 6 potential stay/block window(s); 4 short open gap/watch window(s); 33 calendar change record(s); Manual review found short-stay availability or short-stay listing language</td><td>2026-08-17 (ww)</td></tr>
-<tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=14JAMAICACT' target='_blank'>14 Jamaica Ct</a></td><td><a class='btn' href='https://www.airbnb.com/rooms/820166810527509492' target='_blank'>Airbnb</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=14+Jamaica+Ct+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/14+Jamaica+Ct_rb/' target='_blank'>Zillow</a></td><td>High (212)</td><td>1 post-ordinance review(s); 1 group-trip review(s); 6 complaint(s); 7 potential stay/block window(s); 6 short open gap/watch window(s); 24 calendar change record(s)</td><td>2026-08-24 (ww)</td></tr>
-<tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=183MORGANAVE' target='_blank'>183 Morgan Ave</a></td><td><a class='btn' href='https://www.airbnb.com/rooms/1182545821268906384' target='_blank'>Airbnb</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=183+Morgan+Ave+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/183+Morgan+Ave_rb/' target='_blank'>Zillow</a></td><td>High (182)</td><td>8 post-ordinance review(s); 3 group-trip review(s); 2 complaint(s); 1 potential stay/block window(s); 4 short open gap/watch window(s)</td><td>2026-08-26 (ww)</td></tr>
+<tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=76MORGANAVE' target='_blank'>76 Morgan Ave</a></td><td><a class='btn' href='https://www.airbnb.com/rooms/31993193' target='_blank'>Airbnb</a> <a class='btn' href='https://www.vrbo.com/1634680' target='_blank'>VRBO</a><br><a class='btn' href='https://www.booking.com/hotel/us/casa-al-mare-beachfront-retreat-king-bed-near-yale.html' target='_blank'>Booking</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=76+Morgan+Ave+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/76+Morgan+Ave_rb/' target='_blank'>Zillow</a></td><td>High (224)</td><td>5 post-ordinance review(s); 3 group-trip review(s); 3 complaint(s); 6 potential stay/block window(s); 4 short open gap/watch window(s); 34 calendar change record(s); Manual review found short-stay availability or short-stay listing language</td><td>2026-08-17 (ww)</td></tr>
+<tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=81HENRYST' target='_blank'>81 Henry St</a></td><td><a class='btn' href='https://www.airbnb.com/rooms/857871270285777724' target='_blank'>Airbnb</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=81+Henry+St+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/81+Henry+St_rb/' target='_blank'>Zillow</a></td><td>High (210)</td><td>6 post-ordinance review(s); 2 short-stay review(s); 3 complaint(s); 2 potential stay/block window(s); 6 short open gap/watch window(s); 15 calendar change record(s)</td><td>2026-08-23 (ww)</td></tr>
+<tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=14JAMAICACT' target='_blank'>14 Jamaica Ct</a></td><td><a class='btn' href='https://www.airbnb.com/rooms/820166810527509492' target='_blank'>Airbnb</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=14+Jamaica+Ct+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/14+Jamaica+Ct_rb/' target='_blank'>Zillow</a></td><td>High (207)</td><td>1 post-ordinance review(s); 1 group-trip review(s); 6 complaint(s); 7 potential stay/block window(s); 5 short open gap/watch window(s); 32 calendar change record(s)</td><td>2026-08-24 (ww)</td></tr>
+<tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=183MORGANAVE' target='_blank'>183 Morgan Ave</a></td><td><a class='btn' href='https://www.airbnb.com/rooms/1182545821268906384' target='_blank'>Airbnb</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=183+Morgan+Ave+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/183+Morgan+Ave_rb/' target='_blank'>Zillow</a></td><td>High (187)</td><td>8 post-ordinance review(s); 3 group-trip review(s); 2 complaint(s); 1 potential stay/block window(s); 5 short open gap/watch window(s)</td><td>2026-09-06 (ww)</td></tr>
 <tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=266CCOSEYBEACHAVE' target='_blank'>266C Cosey Beach Ave</a></td><td><a class='btn' href='https://www.airbnb.com/rooms/613749113465478520' target='_blank'>Airbnb</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=266C+Cosey+Beach+Ave+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/266C+Cosey+Beach+Ave_rb/' target='_blank'>Zillow</a></td><td>High (171)</td><td>4 post-ordinance review(s); 7 complaint(s); 2 potential stay/block window(s); 1 short open gap/watch window(s); 26 calendar change record(s)</td><td>2026-08-29 (ww)</td></tr>
 </table>
 <h2>Active STR — High Priority (6)</h2>
 <table class='standard-table'>
 <tr><th>Address</th><th>Links / Evidence</th><th>Confidence</th><th>Key Indicators</th><th>Last Activity</th></tr>
-<tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=4CAMBRIDGECT' target='_blank'>4 Cambridge Ct<br><span class='badge-new'>NEW 2026 LISTING</span></a></td><td><a class='btn' href='https://www.airbnb.com/rooms/1708848363549784062' target='_blank'>Airbnb</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=4+Cambridge+Ct+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/4+Cambridge+Ct_rb/' target='_blank'>Zillow</a></td><td>High (140)</td><td>2 post-ordinance review(s); 1 complaint(s); 7 potential stay/block window(s); 6 short open gap/watch window(s); 40 calendar change record(s)</td><td>2026-08-27 (ww)</td></tr>
+<tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=4CAMBRIDGECT' target='_blank'>4 Cambridge Ct<br><span class='badge-new'>NEW 2026 LISTING</span></a></td><td><a class='btn' href='https://www.airbnb.com/rooms/1708848363549784062' target='_blank'>Airbnb</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=4+Cambridge+Ct+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/4+Cambridge+Ct_rb/' target='_blank'>Zillow</a></td><td>High (145)</td><td>2 post-ordinance review(s); 1 complaint(s); 8 potential stay/block window(s); 5 short open gap/watch window(s); 43 calendar change record(s)</td><td>2026-08-27 (ww)</td></tr>
 <tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=58CAROLINERDD' target='_blank'>58 Caroline Rd [D]</a></td><td><a class='btn' href='https://www.airbnb.com/rooms/24367720' target='_blank'>Airbnb</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=58+Caroline+Rd+%5BD%5D+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/58+Caroline+Rd+%5BD%5D_rb/' target='_blank'>Zillow</a></td><td>High (126)</td><td>4 post-ordinance review(s); 1 group-trip review(s); 1 complaint(s); 4 potential stay/block window(s); 2 short open gap/watch window(s); 12 calendar change record(s)</td><td>2026-08-21 (ww)</td></tr>
-<tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=367THOMPSONAVE' target='_blank'>367 Thompson Ave</a></td><td><a class='btn' href='https://www.airbnb.com/rooms/1316809205882945978' target='_blank'>Airbnb</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=367+Thompson+Ave+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/367+Thompson+Ave_rb/' target='_blank'>Zillow</a></td><td>High (101)</td><td>1 complaint(s); 8 potential stay/block window(s); 2 short open gap/watch window(s); 42 calendar change record(s)</td><td>2026-08-30 (ww)</td></tr>
-<tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=673SILVERSANDSRD' target='_blank'>673 Silver Sands Rd</a></td><td><a class='btn' href='https://www.airbnb.com/rooms/612124974963676976' target='_blank'>Airbnb</a> <a class='btn' href='https://www.vrbo.com/3530766' target='_blank'>VRBO</a><br><a class='btn' href='https://www.google.com/maps/search/?api=1&query=673+Silver+Sands+Rd+East+Haven+CT' target='_blank'>Map</a> <a class='btn' href='https://www.zillow.com/homes/673+Silver+Sands+Rd_rb/' target='_blank'>Zillow</a></td><td>High (100)</td><td>1 post-ordinance review(s); 1 complaint(s); 3 potential stay/block window(s); 4 short open gap/watch window(s); 34 calendar change record(s); Manual review found short-stay availability or short-stay listing language</td><td>2026-08-22 (ww)</td></tr>
+<tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=367THOMPSONAVE' target='_blank'>367 Thompson Ave</a></td><td><a class='btn' href='https://www.airbnb.com/rooms/1316809205882945978' target='_blank'>Airbnb</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=367+Thompson+Ave+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/367+Thompson+Ave_rb/' target='_blank'>Zillow</a></td><td>High (101)</td><td>1 complaint(s); 8 potential stay/block window(s); 2 short open gap/watch window(s); 43 calendar change record(s)</td><td>2026-08-30 (ww)</td></tr>
+<tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=673SILVERSANDSRD' target='_blank'>673 Silver Sands Rd</a></td><td><a class='btn' href='https://www.airbnb.com/rooms/612124974963676976' target='_blank'>Airbnb</a> <a class='btn' href='https://www.vrbo.com/3530766' target='_blank'>VRBO</a><br><a class='btn' href='https://www.google.com/maps/search/?api=1&query=673+Silver+Sands+Rd+East+Haven+CT' target='_blank'>Map</a> <a class='btn' href='https://www.zillow.com/homes/673+Silver+Sands+Rd_rb/' target='_blank'>Zillow</a></td><td>High (100)</td><td>1 post-ordinance review(s); 1 complaint(s); 3 potential stay/block window(s); 4 short open gap/watch window(s); 35 calendar change record(s); Manual review found short-stay availability or short-stay listing language</td><td>2026-08-22 (ww)</td></tr>
 <tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=13STEVENSST' target='_blank'>13 Stevens St</a></td><td><a class='btn' href='https://www.airbnb.com/rooms/603750971605151803' target='_blank'>Airbnb</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=13+Stevens+St+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/13+Stevens+St_rb/' target='_blank'>Zillow</a></td><td>High (80)</td><td>2 post-ordinance review(s); 1 short-stay review(s); 1 complaint(s); 1 potential stay/block window(s); 1 short open gap/watch window(s); 138 calendar change record(s)</td><td>2026-09-05 (ww)</td></tr>
 <tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=95MAINSTC' target='_blank'>95 Main St [C]<br><span class='badge-new'>NEW 2026 LISTING</span></a></td><td><a class='btn' href='https://www.airbnb.com/rooms/1648658273053906764' target='_blank'>Airbnb</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=95+Main+St+%5BC%5D+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/95+Main+St+%5BC%5D_rb/' target='_blank'>Zillow</a></td><td>High (80)</td><td>1 post-ordinance review(s); 1 short-stay review(s); 1 complaint(s); 3 potential stay/block window(s); 48 calendar change record(s)</td><td>2026-08-31 (ls)</td></tr>
 </table>
@@ -162,7 +372,7 @@
 <tr><th>Address</th><th>Links / Evidence</th><th>Confidence</th><th>Key Indicators</th><th>Last Activity</th></tr>
 <tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=93CAROLINERD' target='_blank'>93 Caroline Rd</a></td><td><a class='btn' href='https://www.airbnb.com/rooms/19840633' target='_blank'>Airbnb</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=93+Caroline+Rd+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/93+Caroline+Rd_rb/' target='_blank'>Zillow</a></td><td>High (70)</td><td>1 post-ordinance review(s); 1 short-stay review(s); 1 complaint(s); 2 potential stay/block window(s); 7 calendar change record(s)</td><td>2026-06-20 (cc)</td></tr>
 <tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=2JAMAICACT' target='_blank'>2 Jamaica Ct<br><span class='badge-new'>NEW 2026 LISTING</span></a></td><td><a class='btn' href='https://www.airbnb.com/rooms/1699553340664840451' target='_blank'>Airbnb</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=2+Jamaica+Ct+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/2+Jamaica+Ct_rb/' target='_blank'>Zillow</a></td><td>High (51)</td><td>Calendar accepts stays below 30-day ordinance minimum (observed minimum: 14 nights); 1 complaint(s); 1 potential stay/block window(s); 1 calendar change record(s)</td><td>2026-07-11 (cc)</td></tr>
-<tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=117MORGANAVEA' target='_blank'>117 Morgan Ave [A]</a></td><td><a class='btn' href='https://www.airbnb.com/rooms/37807642' target='_blank'>Airbnb</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=117+Morgan+Ave+%5BA%5D+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/117+Morgan+Ave+%5BA%5D_rb/' target='_blank'>Zillow</a></td><td>High (45)</td><td>3 potential stay/block window(s); 2 short open gap/watch window(s); 54 calendar change record(s)</td><td>2026-07-31 (cc)</td></tr>
+<tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=117MORGANAVEA' target='_blank'>117 Morgan Ave [A]</a></td><td><a class='btn' href='https://www.airbnb.com/rooms/37807642' target='_blank'>Airbnb</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=117+Morgan+Ave+%5BA%5D+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/117+Morgan+Ave+%5BA%5D_rb/' target='_blank'>Zillow</a></td><td>High (45)</td><td>3 potential stay/block window(s); 2 short open gap/watch window(s); 55 calendar change record(s)</td><td>2026-07-31 (cc)</td></tr>
 <tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=95MAINSTA' target='_blank'>95 Main St [A]<br><span class='badge-new'>NEW 2026 LISTING</span></a></td><td><a class='btn' href='https://www.airbnb.com/rooms/1648679308948290584' target='_blank'>Airbnb</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=95+Main+St+%5BA%5D+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/95+Main+St+%5BA%5D_rb/' target='_blank'>Zillow</a></td><td>High (41)</td><td>1 complaint(s); 3 potential stay/block window(s); 11 calendar change record(s)</td><td>2026-06-25 (cc)</td></tr>
 <tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=105MEADOWST' target='_blank'>105 Meadow Street</a></td><td><a class='btn' href='https://www.vrbo.com/4479265' target='_blank'>VRBO</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=105+Meadow+Street+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/105+Meadow+Street_rb/' target='_blank'>Zillow</a></td><td>High (31)</td><td>1 complaint(s); Manual review found short-stay availability or short-stay listing language</td><td></td></tr>
 <tr><td><a href='https://www.saferr-eh.com/enforcement-review-dashboard?property_ref=140THOMPSONST' target='_blank'>140 Thompson St</a></td><td><a class='btn' href='https://www.vrbo.com/3499368' target='_blank'>VRBO</a> <a class='btn' href='https://www.google.com/maps/search/?api=1&query=140+Thompson+St+East+Haven+CT' target='_blank'>Map</a><br><a class='btn' href='https://www.zillow.com/homes/140+Thompson+St_rb/' target='_blank'>Zillow</a></td><td>High (30)</td><td>1 complaint(s); Manual review found short-stay availability or short-stay listing language</td><td></td></tr>
